@@ -1,0 +1,59 @@
+@media screen and (max-width: 600px) {
+  body {
+  background-image:url(https://cdn.glitch.com/7be1c601-5ace-4039-b1a6-1d672e11c912%2Fmagicsmallscreen.png?v=1631856457859);
+  }
+  
+  #answers{
+      transform:translate(-80px,-50px);
+
+}
+}
+
+@media screen and (min-width: 600px) {
+  body {
+  background-image:url(https://cdn.glitch.com/7be1c601-5ace-4039-b1a6-1d672e11c912%2Fmagicbigscreen.png?v=1631856457839);
+  }
+  #answers{
+  transform:translate(50px,50px);
+}
+}
+
+body{
+  font-family: helvetica, sans-serif;
+  font-size:16pt;
+  margin: 2em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.question{
+  max-width:30%;
+  margin-left:auto;
+  margin-right:auto;
+  color:white;
+}
+
+.answer{
+  max-width:40%;
+  margin-left:auto;
+  margin-right:auto;
+  color:black;
+}
+
+#answers{
+  position:absolute;
+  height:50px;
+  width:180px;
+}
+
+#hand{
+  max-width:80%;
+  position:absolute;
+  transform:translate(-160px,-140px);
+}
