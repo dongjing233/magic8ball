@@ -58,23 +58,46 @@ var answers = [
 var randomAnswers = answers[Math.floor(Math.random()*answers.length)];
 document.querySelector('#answers').innerHTML = randomAnswers;
 
-document.addEventListener('mousemove', function(e) {
-  let body = document.querySelector('body');
-  let answers = document.getElementById('answers');
-  let left = e.offsetX;
-  let top = e.offsetY;
-  answers.style.left = left + 'px';
-  answers.style.top = top + 'px';
-});
+
+
+
+
+
 
 document.addEventListener('mousemove', function(e) {
   let body = document.querySelector('body');
   let hand = document.getElementById('hand');
-  let left = e.offsetX;
-  let top = e.offsetY;
+  let left = e.clientX-140;
+  let top = e.clientY-140;
   hand.style.left = left + 'px';
   hand.style.top = top + 'px';
 });
 
+
+
+
+
+document.addEventListener('mousemove', function(e) {
+  let body = document.querySelector('body');
+  let answers = document.getElementById('answers');
+  let left = e.clientX;
+  let top = e.clientY;
+  answers.style.left = left + 'px';
+  answers.style.top = top + 'px';
+});
+
+
+
+
+
+
+
+
+      $(document).on('mouseenter', '.image-item', function() {
+         $(this).find('span.overlay').show();
+      });
+      $(document).on('mouseleave', '.image-item', function() {
+         $(this).find('span.overlay').hide();
+      });
 
 
